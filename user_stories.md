@@ -69,3 +69,80 @@ _As an admin, I want to view the list of doctors in the portal, so that I can ma
 **Notes:**
 - The doctor list should refresh after a doctor is added or deleted.
 - Consider pagination if the number of doctors becomes large.
+
+# Patient User Stories
+
+**1. View List of Doctors:**  
+_As a patient, I want to view a list of doctors without logging in, so that I can explore my options before registering._
+
+**Acceptance Criteria:**
+1. Visitors can access the list of doctors without creating an account or logging in.
+2. The system displays basic information for each doctor (e.g., name, specialty, and availability).
+3. Visitors are prompted to sign up or log in when attempting to book an appointment.
+
+**Priority:** Medium  
+**Story Points:** 2  
+
+**Notes:**
+- Only public doctor information should be displayed.
+- Sensitive doctor or patient information should remain hidden.
+
+**2. Sign Up for Appointments:**  
+_As a patient, I want to sign up using my email and password, so that I can book appointments._
+
+**Acceptance Criteria:**
+1. The patient can create an account by providing a valid email address and password.
+2. The system validates that the email is unique and the password meets security requirements.
+3. The system confirms successful registration and allows the patient to log in.
+
+**Priority:** High  
+**Story Points:** 3  
+
+**Notes:**
+- Passwords should be securely encrypted.
+- Email verification can be implemented as a future enhancement.
+
+**3. Log Into Portal:**  
+_As a patient, I want to log into the portal, so that I can manage my bookings._
+
+**Acceptance Criteria:**
+1. The patient can log in using a valid email and password.
+2. The system grants access to the patient's dashboard after successful authentication.
+3. The system displays an error message if the login credentials are invalid.
+
+**Priority:** High  
+**Story Points:** 3  
+
+**Notes:**
+- Consider locking the account after multiple failed login attempts.
+- Sessions should be securely managed.
+
+**4. Log Out of Portal:**  
+_As a patient, I want to log out of the portal, so that I can secure my account after using the system._
+
+**Acceptance Criteria:**
+1. The patient can log out by selecting the logout option.
+2. The system immediately ends the current session.
+3. The patient is redirected to the login page after logging out.
+
+**Priority:** High  
+**Story Points:** 1  
+
+**Notes:**
+- Expire the session token after logout.
+- Prevent access to authenticated pages after logging out.
+
+**5. Book Appointment:**  
+_As a patient, I want to log in and book an hour-long appointment, so that I can consult with a doctor._
+
+**Acceptance Criteria:**
+1. The patient must be logged in before booking an appointment.
+2. The patient can select a doctor, an available date, and a one-hour time slot.
+3. The system confirms the booking and prevents double-booking of the selected time slot.
+
+**Priority:** High  
+**Story Points:** 5  
+
+**Notes:**
+- Only available one-hour appointment slots should be displayed.
+- Patients should receive a confirmation after successfully booking an appointment.

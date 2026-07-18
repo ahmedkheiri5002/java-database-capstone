@@ -146,3 +146,80 @@ _As a patient, I want to log in and book an hour-long appointment, so that I can
 **Notes:**
 - Only available one-hour appointment slots should be displayed.
 - Patients should receive a confirmation after successfully booking an appointment.
+
+# Doctor User Stories
+
+**1. Log Into Portal:**  
+_As a doctor, I want to log into the portal, so that I can manage my appointments._
+
+**Acceptance Criteria:**
+1. The doctor can log in using a valid username or email and password.
+2. The system grants access to the doctor's dashboard upon successful authentication.
+3. The system displays an error message if the login credentials are invalid.
+
+**Priority:** High  
+**Story Points:** 3  
+
+**Notes:**
+- Passwords should be securely encrypted.
+- Consider account lockout after multiple failed login attempts.
+
+**2. Log Out of Portal:**  
+_As a doctor, I want to log out of the portal, so that I can protect my data after using the system._
+
+**Acceptance Criteria:**
+1. The doctor can log out by selecting the logout option.
+2. The system immediately ends the current session.
+3. The doctor is redirected to the login page after logging out.
+
+**Priority:** High  
+**Story Points:** 1  
+
+**Notes:**
+- Expire the session token after logout.
+- Prevent access to authenticated pages after logging out.
+
+**3. View Appointment Calendar:**  
+_As a doctor, I want to view my appointment calendar, so that I can stay organized._
+
+**Acceptance Criteria:**
+1. The doctor can view all upcoming appointments in a calendar format.
+2. The calendar displays appointment details such as patient name, date, and time.
+3. The calendar updates automatically when appointments are booked, canceled, or rescheduled.
+
+**Priority:** High  
+**Story Points:** 3  
+
+**Notes:**
+- The calendar should display appointments in chronological order.
+- Only the logged-in doctor's appointments should be visible.
+
+**4. Mark Unavailability:**  
+_As a doctor, I want to mark my unavailability, so that patients can only book available time slots._
+
+**Acceptance Criteria:**
+1. The doctor can select dates and times to mark as unavailable.
+2. The system prevents patients from booking appointments during unavailable periods.
+3. The doctor's availability is updated immediately after saving the changes.
+
+**Priority:** High  
+**Story Points:** 5  
+
+**Notes:**
+- Existing appointments should not be affected unless explicitly modified.
+- Doctors should be able to edit or remove unavailable periods.
+
+**5. Update Profile:**  
+_As a doctor, I want to update my profile with my specialization and contact information, so that patients have up-to-date information._
+
+**Acceptance Criteria:**
+1. The doctor can edit their specialization and contact information.
+2. The system validates the updated information before saving.
+3. The updated profile information is immediately visible to patients.
+
+**Priority:** Medium  
+**Story Points:** 2  
+
+**Notes:**
+- Required fields should not be left blank.
+- Only the logged-in doctor should be able to update their own profile.
